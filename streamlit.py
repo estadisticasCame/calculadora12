@@ -193,7 +193,7 @@ with st.form(key='calculator_form'):
     columna_programa, columna_inscripcion, columna_provincia = st.columns(3)
     with columna_programa:
         # Seleccionar el programa
-        programas = ["-", "3 Cuotas", "6 Cuotas", "9 Cuotas", "12 Cuotas (10 días hábiles)", "12 Cuotas (60 días corridos)"]
+        programas = ["-", "3 Cuotas", "6 Cuotas"]
         programa_seleccionado = st.selectbox("Seleccione el programa",programas)  
 
     with columna_inscripcion:
@@ -287,10 +287,7 @@ if (st.session_state.submit_button == True):
             
             tasas_cft = {
                         "3 Cuotas" : 0.0488,
-                        "6 Cuotas" : 0.0934,
-                        "9 Cuotas" : 0.1352,
-                        "12 Cuotas (10 días hábiles)" : 0.1743 ,
-                        "12 Cuotas (60 días corridos)": 0.1344
+                        "6 Cuotas" : 0.0934
                         }
             
             # PARA AVANZAR EL CÁLCULO
